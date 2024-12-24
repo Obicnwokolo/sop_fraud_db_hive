@@ -57,9 +57,9 @@ object fraud {
     val df_Updated = df_FullName.drop(columnsToDrop:_*)
     println("updated DataFrame #5: cc_num first_name, & last_name columns dropped")
 
-    // update #6 >> reorder columns and move age next to dob
+    // update #6 >> reorder columns and move gender, dob & age next to full name
     val df_reordered = df_Updated.select( "id", "trans_date_time", "merchant", "category", "amt", "full_name",
-      "gender", "street", "city", "state", "zip", "lat", "long", "population", "job", "dob", "age",
+      "gender", "dob", "age", "street", "city", "state", "zip", "lat", "long", "population", "job",
       "trans_num", "unix_time", "merch_lat", "merch_long", "is_fraud")
     println("updated DataFrame #6: columns reordered")
 
