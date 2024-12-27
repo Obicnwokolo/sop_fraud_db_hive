@@ -84,7 +84,7 @@ object fraud {
     df_modifiedRows.show(5)
 
     // Write DataFrame to Hive table
-    df.write
+    df_modifiedRows.write
       .mode("overwrite")  // Use append for adding data without overwriting
       .saveAsTable("bigdata_nov_2024.sop_fraud_trans")  // Specify your database and table name
 
