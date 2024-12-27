@@ -24,7 +24,9 @@ object fraud {
     val df = spark.read
       .jdbc(jdbcUrl, "sop_fraud_scala", dbProperties)  // Replace "your_table_name" with your table name
 
-    //df.show(5)
+    println("read successful")
+
+        //df.show(5)
 
     // update #1 >> Fill empty rows in categories with "Travel"
     val df_cleaned = df.withColumn(
@@ -82,9 +84,9 @@ object fraud {
     df_modifiedRows.show(5)
 
     // Write DataFrame to Hive table
-    //df.write
-    //  .mode("overwrite")  // Use append for adding data without overwriting
-    //  .saveAsTable("bigdata_nov_2024.railway")  // Specify your database and table name
+    df.write
+      .mode("overwrite")  // Use append for adding data without overwriting
+      .saveAsTable("bigdata_nov_2024.railway")  // Specify your database and table name
 
     // Stop SparkSession
     spark.stop()
