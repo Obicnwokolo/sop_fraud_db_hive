@@ -86,7 +86,7 @@ object fraud {
     // Write DataFrame to Hive table
     df.write
       .mode("overwrite")  // Use append for adding data without overwriting
-      .saveAsTable("bigdata_nov_2024.railway")  // Specify your database and table name
+      .saveAsTable("bigdata_nov_2024.sop_fraud_trans")  // Specify your database and table name
 
     // Stop SparkSession
     spark.stop()
