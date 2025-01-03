@@ -6,7 +6,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>spark</groupId>
-  <artifactId>fraud</artifactId>
+  <artifactId>sop_fraud_db_hive</artifactId>
   <version>1.0-SNAPSHOT</version>
 
   <properties>
