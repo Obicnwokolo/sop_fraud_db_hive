@@ -22,7 +22,7 @@ object initload_fraud {
 
     // Read data from the PostgreSQL table into a DataFrame
     val df = spark.read
-      .jdbc(jdbcUrl, "sop_fraud_scala", dbProperties)  // Replace "your_table_name" with your table name
+      .jdbc(jdbcUrl, "sop_fraud_scala_b", dbProperties)  // Replace "your_table_name" with your table name
 
     println("read successful")
 

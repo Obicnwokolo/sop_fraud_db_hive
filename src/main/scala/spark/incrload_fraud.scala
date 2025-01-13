@@ -31,7 +31,7 @@ object incrload_fraud {
     println(s"Maximum ID in Hive table: $maxIdHive")
 
     // Read data from the PostgreSQL table into a DataFrame
-    val query = s"(SELECT * FROM sop_fraud_scala WHERE id > $maxIdHive) AS incremental_data"
+    val query = s"(SELECT * FROM sop_fraud_scala_b WHERE id > $maxIdHive) AS incremental_data"
     val df_postgres = spark.read
       .jdbc(jdbcUrl, query, dbProperties)  // Replace "your_table_name" with your table name
 
@@ -103,8 +103,6 @@ object incrload_fraud {
       .saveAsTable("bigdata_nov_2024.sop_fraud_trans_b")  // Specify your database and table name
 
     println(s"$newRowCount new records added")
-
-
 
     // Stop SparkSession
     spark.stop()
