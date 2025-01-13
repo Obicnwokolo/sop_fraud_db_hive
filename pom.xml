@@ -93,7 +93,7 @@
           <archive>
             <manifest>
               <addClasspath>true</addClasspath>
-              <mainClass>spark.fraud</mainClass> <!-- Replace with your main class -->
+              <mainClass>spark.initload_fraud</mainClass> <!-- Replace with your main class -->
             </manifest>
           </archive>
         </configuration>

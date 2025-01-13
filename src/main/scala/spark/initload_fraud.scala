@@ -3,7 +3,7 @@ package spark
 import org.apache.spark.sql.{SparkSession, DataFrame}
 import org.apache.spark.sql.functions._
 
-object fraud {
+object initload_fraud {
   def main(args: Array[String]): Unit = {
     // Create Spark session
     val spark = SparkSession.builder()
